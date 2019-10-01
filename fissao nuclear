@@ -1,0 +1,30 @@
+## fissão nuclear 
+
+## FORMULA É: f(k,lamb)=e^(-lamb)*(lamb)^k/k!
+
+
+##montar a formula do fatorial
+
+fat=function(n){
+if(n<0){return("Não existe fatorial -x")}
+if(n==0){return(1)}
+a=1
+for(i in 1:n){
+b=i*a
+a=b
+}
+return(a)
+}
+
+###montando a formula da probabilidade
+
+prob=function(k,lamb){
+e=2.718281
+f=e^(-lamb)*(lamb)^k/fat(k)
+return(f)
+}
+
+
+
+
+

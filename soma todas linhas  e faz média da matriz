@@ -1,0 +1,15 @@
+##soma todas as linhas e faz a média da matriz
+
+
+mediadamatriz=function(A){
+	soma=0
+	tamanho=dim(A)
+	n=tamanho[1]
+	m=tamanho[1]*tamanho[2]
+	for(i in 1:n){
+		for(k in 1:n){
+			soma=soma + A[i,k]
+		}
+	}	
+return(soma/m)
+}

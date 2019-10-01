@@ -1,0 +1,35 @@
+####Suponha um combustível nuclear ideal que  é tão perfeito, mas tão perfeito, que toda a massa desintegrada se transforma em energia  útil. A cada ciclo de operação do reator a massa  é transformada em energia com uma performance constante e sempre igual a 0.1% da massa disponível naquele momento. Depois de 13 ciclos o material  é descartado e um novo lote é inicializado, começando novamente da mesma massa inicial,para outros 13 ciclos, e assim por diante. Uma massa de material inicial  M= 3.2 μg gera,nesse processo de 13 ciclos, uma energia total E dada pela famosa equação E= mc^2.Sendo assim se pergunta: se  em vez de 13 ciclos fossem utilizados  2 ciclos, qual deveria ser o aumento de performance do reator para que a energia final obtida fosse a mesma?
+
+
+m_inicial=3.2*10^-6
+##tem que conter um for, pois há N ciclos no problema
+performance constante de = 0.1% da massa disponível ## massa_nova*performance
+
+m_final=m_inicial-(m_inicial*performance)
+m_inicial=m_final
+
+
+m_sobra=function(M,P,C){
+m_inicial=M
+	for(i in 1:C){
+	m_final=m_inicial-(m_inicial*P)
+	m_inicial=m_final
+	} 
+resposta=m_final
+return(m_final)
+}
+
+
+m_sobra(3.2*10^-6, 0.001,13)
+
+m_saiu=3.2*10^-6- m_sobra(3.2*10^-6, 0.001,13)
+c=2.99
+
+E=m_saiu*c^2
+
+
+
+
+
+
+

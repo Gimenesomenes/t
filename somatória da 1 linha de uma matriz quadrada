@@ -1,0 +1,16 @@
+
+##somatória da 1º linha da matriz.
+
+somalinha1=function(A){
+	tamanho=dim(A)
+	n=tamanho[1]
+	somaL=0
+	for(j in 1:n){
+		somaL= somaL + A[1,j]
+	}
+return(print(somaL))
+}
+
+
+
+

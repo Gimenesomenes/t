@@ -1,0 +1,53 @@
+﻿## calcular bolinha gravidade on-off
+
+g=9.8
+v0=15
+y0=1.5
+Dt=0.05
+
+v=seq(0,0,len=50)
+v[1]=v0-g*Dt 
+for(i in 1:50){
+v[i+1]=v[i]-g*Dt
+}
+y=seq(0,0,50) 		###Espaço deltaS
+y[1]=y0+v0*Dt
+for(i in 1:50){
+y[i+1]=y[i]+v[i]*Dt
+
+
+funcaoy=function(t,y0,v0,a){
+	return(y0+v0*t+a/2*t^2)
+}
+
+
+
+
+#colocando os vetores dentro de uma função
+
+
+h=function(y0,v0,g,Dt,N){
+	y=(seq(0,0,length=N))
+	v=(seq(0,0,length=N))
+	y[1]=y0+v0*Dt
+	v[1]=v0-g*Dt
+		for(i in 1:N){
+		v[i+1]=v[1]-g*Dt
+		y[i+1]=y[1]+v[1]*Dt
+	}
+return(y)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

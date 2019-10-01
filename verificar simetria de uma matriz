@@ -1,0 +1,16 @@
+## ver se uma matriz é simétrica
+	
+
+
+simetria=function(A){
+	tamanho=dim(A)
+	n=tamanho[1]
+	for(i in 1:n){
+		for(j in 1:n){	
+			if(A[i,j]!= A[j,i]){return("Não tem simetria")
+			}
+		}
+	}	
+return("Tem simetria")
+}
+

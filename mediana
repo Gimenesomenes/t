@@ -1,0 +1,39 @@
+
+
+
+
+##ordenar o vetor:
+
+ord=function(x){
+n=length(x)
+for(i in 1:n){
+	for(j in 1:n){
+		if(x[i]<x[j]){
+			a=x[i]
+			x[i]=x[j]
+			x[j]=a
+		}	
+	}
+}
+return(x)
+}
+
+
+
+
+##mediana
+
+
+mediana = function (n){
+ c3 = length(n)
+ b = round((c3+1)/2)
+ med = n[b]
+return(med)
+}
+
+
+
+
+
+
+

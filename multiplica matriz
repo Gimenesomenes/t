@@ -1,0 +1,19 @@
+##multiplicação de 2 matriz
+
+multimatriz=function(A,C){ 
+	tamanho=dim(A)
+	n=tamanho[1]
+	B=matrix(0,n,n)
+	for(i in 1:n){
+		for(j in 1:n){		
+			soma=0	
+			for(k in 1:n){ 
+				soma=soma+ A[i,k]*C[k,j]
+			}	
+		B[i,j]=soma
+		}
+	}	
+return(B)
+}
+
+	

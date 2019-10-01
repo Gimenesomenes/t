@@ -1,0 +1,38 @@
+Alunos: João Paulo Novato de Oliveira nºUSP: 9039020
+	Carolina Gimenes Oliveira nºUSP: 8933728
+
+
+Programa:
+
+randomwalk = function(n){
+y=c()
+x=c()
+x[1] = 0;
+y[1] = 0;
+for (i in 1:n){
+a = runif(1);
+round(a,2)
+if (a <= 0.25){
+x[i+1] = x[i] - 1;
+y[i+1] = y[i];
+}
+if (a>0.25 & a<=0.5){
+x[i+1] = x[i] + 1;
+y[i+1] = y[i];
+}
+if (a>0.5 & a<=0.75){
+x[i+1] = x[i];
+y[i+1] = y[i] - 1;
+} 
+if (a>0.75){
+x[i+1] = x[i];
+y[i+1] = y[i] + 1;
+} 
+}
+m=matrix(0,n+1,2)
+m[,1]=y
+m[,2]=x
+return(m)
+}
+particula=randomwalk(10000)
+plot(particula, type="l", col="red")

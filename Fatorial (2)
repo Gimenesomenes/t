@@ -1,0 +1,14 @@
+## Fatorial	
+
+
+fatorial=function(n){	
+	if(n < 0){return("não existe fatorial -x")} ##condições if
+	if(n==0){return(1)}	##condições if
+		a=1	##inicializando variável para acumular no for
+	for(i in 1:n){	##for de i=1 até n, que é o numero que queremos o fat
+		b= i*a	## i*a; i numero do momento a=1, ou seja vai 
+		a=b	## acumulando
+	}		##a=b atualiza a variável b, que joga a proxima var.
+return(b)		## no for... 
+}			## return(b) retorna o valor hora que acabar o laço
+	

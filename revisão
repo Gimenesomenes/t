@@ -1,0 +1,303 @@
+## revisão prova rec. programação.
+
+##Função fatorial:
+
+
+fatorial=function(n){
+	if(n < 0){return("Não existe -x")}
+	if(n==0){return(1)}
+	a=1
+	for(i in 1:n){
+	b=i*a
+	a=b
+}
+return(a)
+}
+
+
+
+##Função Seno:
+
+Seno=function(theta){
+	a=1-cos(theta)^2
+	b=sqrt(a)
+return(b)
+}
+
+
+
+##Função bolinha;criar sequencia de vetores; lançamento vertical:
+
+g=9.8 #m/s^2
+v0=15 #m/s
+y0=1.5 #m
+Dt=0.05 #s
+
+
+#Vetor para V
+
+v=seq(0,0,length=50)
+v[1]=v0-g*Dt
+for(i in 1:50){
+	v[i+1]=v[i]-g*Dt
+}
+
+
+
+
+#Vetor para Y=S
+
+y=seq(0,0,length=50)
+
+y[1]=y0+v0*Dt
+for(i in 1:50){
+y[i+1]=y[i]+v[i]*Dt
+}
+
+###Declara a função que engloba as duas:
+
+
+H=function(v0,y0,Dt, g, N){
+	y=seq(0,0,len=N)
+	v=seq(0,0,len=N)
+	y[1]=y0+v0*Dt
+	v[1]=v0-g*Dt
+	for(i in 1:(N-1)){
+	v[i+1]=v[i]-g*Dt
+	y[i+1]=y[i]+v[i]*Dt
+	}
+return(y)
+}
+
+
+
+##Função da fissão nuclear:
+
+P=0.001
+Ciclos=13, mas quer saber em 2 ciclos
+Mi=3.2*10^(-6)
+
+E=m*c^2
+
+
+E=function(N,P,M){
+	Mi=M
+for(i in 1:N){
+mfinal=Mi-(Mi*P)
+Mi=mfinal
+}
+resposta=Mi
+return(Mi)
+}
+
+
+E(13,0.001,3.2*10^(-6))
+
+msaiu=3.2*10^(-6)- E(13,0.001,3.2*10^(-6))
+c=3*10^8
+E=msaiu*c^2
+
+##Fissão nuclear
+
+e= 2.718281828
+
+
+fat=function(n){
+if(n<0){return("Não existe!")}
+if(n==0){return(1)}
+	a=1
+	for(i in 1:n){
+	b=i*a
+	a=b
+}
+return(a)
+}
+
+prob=function(k, lamb){
+e= 2.718281828
+f=(e)^(-lamb)*lamb^k / fat(k)
+return(f)
+}
+
+##Função de rydberg; niveis de energia:
+
+E=function(a,b){
+h = 6.626 * 10^(-34) ## J*s
+c = 299792458 ## m/s
+R = 1.09737316 * 10^7 # Rydberg constant
+E=h*c*R*(1/a^2 - 1/b^2)
+return(E)
+}
+
+
+##demonstra as transições:
+transições=function(N){
+	for(a in 1:N){
+		for(b in 1:N){
+		print("__________")
+		print(a)
+		print(b)
+		print(E(a,b))
+		}
+	}
+return("fim")
+
+
+
+###somatória da PA
+
+
+PA=function(N){
+	b=1
+	for(i in 1:(N+1)){
+	b= i * N[1]
+	a=b
+}
+return(a/2)
+}
+
+
+
+##Combinatória
+v=c("a","b","c","d","e")
+
+cumb=function(n,s){
+ 	a=1
+	for(i in 1:n){
+		b=i*a
+		a=b
+	w=1
+	for(i in 1:s){
+		r=i*w
+		w=r
+	}
+}
+
+return(a/w)
+}
+
+
+##Ordena:
+
+
+ordena=function(x){
+	n=length(x)
+	xordenado=seq(0,0,len=n)
+	for(i in 1:n){
+	j=which.min(x)
+	xordenado[i]=x[j]
+	x=x[-j]
+}
+return(xordenado)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
